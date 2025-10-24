@@ -97,3 +97,12 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# Local editor config files
+.editorconfig.user
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+.vscode/
+.vsconfig
