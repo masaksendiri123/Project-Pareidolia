@@ -32,6 +32,7 @@ Catatan: Semua dependensi dikelola otomatis oleh Unity melalui Unity Package Man
     - MovingCamera.cs (memindahkan transform kamera mengikuti `cameraPosition`)
     - CharacterMovement.cs (Kontrol karakter dengan input dari playerinputaction)
     - PlayerInputAction.inputactions (aset Input System)
+    - TestingPullMerge
   - Settings/
     - URP-*.asset, UniversalRenderPipelineGlobalSettings.asset (konfigurasi URP)
 - Packages/
