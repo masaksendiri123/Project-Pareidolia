@@ -28,6 +28,8 @@ Catatan: Semua dependensi dikelola otomatis oleh Unity melalui Unity Package Man
 ## Struktur Proyek (ringkas)
 
 - Assets/
+  - ExternalPackages/
+    - Day-Night Skyboxes (Digunakan Untuk Setting Skybox, tampilan angkasa)
   - Scenes/
     - SampleScene.unity (scene utama saat ini)
   - Scripts/
@@ -35,8 +37,14 @@ Catatan: Semua dependensi dikelola otomatis oleh Unity melalui Unity Package Man
     - MovingCamera.cs (memindahkan transform kamera mengikuti `cameraPosition`)
     - CharacterMovement.cs (Kontrol karakter dengan input dari playerinputaction)
     - PlayerInputAction.inputactions (aset Input System)
+    - ObjectRaycastInteraction.cs (Raycast untuk interact object)
+    - OnOffFlashlightScript.cs (Mematikan dan Menghidupkan flaslight yang dipegang karakter)
   - Settings/
     - URP-*.asset, UniversalRenderPipelineGlobalSettings.asset (konfigurasi URP)
+  - TextMesh Pro
+  - UIAsset
+    - Sprite (Tempat penyimpanan foto untuk UI)
+      - Crosshair.png (Crosshair sementara)
 - Packages/
   - manifest.json (daftar paket UPM)
 - ProjectSettings/
