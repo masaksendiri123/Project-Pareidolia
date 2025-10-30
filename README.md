@@ -91,3 +91,4 @@ Saat ini tidak ada skrip build khusus; proses build dilakukan melalui Unity Edit
 ## Catatan Pengembangan
 - Jika Anda memperbarui versi Unity, perbarui juga `ProjectSettings/ProjectVersion.txt` dan dokumentasi ini.
 - Paket UPM dikelola melalui `Packages/manifest.json`. Hindari mengedit `packages-lock.json` secara manual.
+- Belum ngapa ngapain
