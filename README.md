@@ -30,6 +30,7 @@ Catatan: Semua dependensi dikelola otomatis oleh Unity melalui Unity Package Man
   - Scripts/
     - CameraScript.cs (kontrol kamera berbasis Input System; mengunci kursor, rotasi kamera & orientasi badan)
     - MovingCamera.cs (memindahkan transform kamera mengikuti `cameraPosition`)
+    - CharacterMovement.cs (Kontrol karakter dengan input dari playerinputaction)
     - PlayerInputAction.inputactions (aset Input System)
   - Settings/
     - URP-*.asset, UniversalRenderPipelineGlobalSettings.asset (konfigurasi URP)
