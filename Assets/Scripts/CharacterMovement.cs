@@ -2,19 +2,20 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class CharacterMovement : MonoBehaviour
 {
     [Header("CharacterObjectStuff")]
-
     public GameObject CharacterMesh;
     public CharacterController CharacterControllerComponent;
     public Transform CharacterOrientation;
 
     [Header("PlayerInput")]
     public InputActionReference Movement;
+    public MovementStatusHandler.MovementStatus CurrentMovementStatus;
 
     [Header("Variables")]
     public float MovementSpeed;
@@ -28,6 +29,9 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Melihat Apakah Character Bisa Gerak Atau Enggak
+        CurrentMovementStatus = FindObjectOfType<MovementStatusHandler>().CurrentMovementStatus;
+
         transform.rotation = CharacterOrientation.transform.rotation;
 
         float movementForwardBackward = Movement.action.ReadValue<Vector2>().y;
@@ -35,7 +39,7 @@ public class CharacterMovement : MonoBehaviour
 
         Vector3 movementDirection = new Vector3(movementLeftRight, 0f, movementForwardBackward);
 
-        if(movementDirection.magnitude >= 0.1f)
+        if(movementDirection.magnitude >= 0.1f && CurrentMovementStatus == MovementStatusHandler.MovementStatus.CanMove)
         {
             Walking(movementDirection);
         }

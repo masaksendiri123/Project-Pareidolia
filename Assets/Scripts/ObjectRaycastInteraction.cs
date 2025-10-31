@@ -57,7 +57,7 @@ public class ObjectRaycastInteraction : MonoBehaviour
         {
             if (m_raycastHitInteract.collider.CompareTag("Interactable"))
             {
-                //Nanti Buat Ngejalanin function yang terdapat pada component m_raycastHitInteract   
+                m_raycastHitInteract.collider.GetComponent<OpenUIForDialogAndNote>().OnInteract();
             }
         }
     }
