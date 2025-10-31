@@ -11,6 +11,7 @@ public class CameraScript : MonoBehaviour
     [Header("PlayerInput")]
     public InputActionReference cameraInput;
     public float cameraSensitivity;
+    public MovementStatusHandler.MovementStatus CurrentMovementStatus;
 
     [Header("PlayerOrientation")]
     public Transform playerBodyOrientation;
@@ -27,15 +28,21 @@ public class CameraScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float mouseY = cameraInput.action.ReadValue<Vector2>().x * Time.deltaTime * cameraSensitivity;
-        float mouseX = cameraInput.action.ReadValue<Vector2>().y * Time.deltaTime * cameraSensitivity;
+        //Melihat Apakah Character Bisa Gerak Atau Enggak
+        CurrentMovementStatus = FindObjectOfType<MovementStatusHandler>().CurrentMovementStatus;
 
-        yRotation += mouseY;
-        xRotation -= mouseX;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        if (CurrentMovementStatus == MovementStatusHandler.MovementStatus.CanMove)
+        {
+            float mouseY = cameraInput.action.ReadValue<Vector2>().x * Time.deltaTime * cameraSensitivity;
+            float mouseX = cameraInput.action.ReadValue<Vector2>().y * Time.deltaTime * cameraSensitivity;
 
-        // Memutar kamera dan badan
-        transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-        playerBodyOrientation.rotation = Quaternion.Euler(0, yRotation, 0);
+            yRotation += mouseY;
+            xRotation -= mouseX;
+            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+            // Memutar kamera dan badan
+            transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+            playerBodyOrientation.rotation = Quaternion.Euler(0, yRotation, 0);
+        }
     }
 }
