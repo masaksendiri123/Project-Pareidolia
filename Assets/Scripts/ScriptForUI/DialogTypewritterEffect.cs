@@ -11,10 +11,13 @@ using System;
 
 public class DialogTypewritterEffect : MonoBehaviour
 {
+
+    [Header("Input Action Reference untuk Skip Dialog")]
     public InputActionReference SkippingAction;
     bool isReadyForNextDialog;
-    bool loopCharacterDone;
+    bool usingSkip;
 
+    [Header("TextMeshPro UGUI Component untuk Dialog")]
     TMPro.TextMeshProUGUI dialogTextUI;
 
     [Header("Untuk Atur Delay Character pada Inspector")]
@@ -29,7 +32,9 @@ public class DialogTypewritterEffect : MonoBehaviour
     private int sentenceIndex;
     private int charIndex;
 
+    [Header("Untuk Menyimpan Kalimat yang Sedang Ditampilkan")]
     private string currentDialog;
+    private string specialCode;
 
     private void Awake()
     {
@@ -43,9 +48,10 @@ public class DialogTypewritterEffect : MonoBehaviour
     }
 
     // Memulai Proses Penulisan Dialog
-    public void Write(List<string> dialogs)
+    public void Write(List<string> dialogs, string m_specialCode)
     {
         dialogTextUI = GetComponent<TMPro.TextMeshProUGUI>();
+        specialCode = m_specialCode;
         Coroutine m_writing = StartCoroutine(TypeWritterEffect(dialogs));
     }
 
@@ -55,6 +61,7 @@ public class DialogTypewritterEffect : MonoBehaviour
         for (sentenceIndex = 0; sentenceIndex < dialogs.Count; sentenceIndex++)
         {
             isReadyForNextDialog = false;
+            usingSkip = false;
 
             dialogTextUI.text = ""; // Clear previous text
 
@@ -63,7 +70,7 @@ public class DialogTypewritterEffect : MonoBehaviour
             for (charIndex = 0; charIndex < currentDialog.Length; charIndex++)
             {
                 char currentCharacter = currentDialog[charIndex];
-                dialogTextUI.text += currentCharacter; // Add character to UI text
+                dialogTextUI.text += currentCharacter; // Add character to UI 
 
                 if (currentCharacter == '.' || currentCharacter == ',' || currentCharacter == '!' || currentCharacter == '?')
                 {
@@ -75,15 +82,31 @@ public class DialogTypewritterEffect : MonoBehaviour
                     yield return normalCharacterWait;
                 }
             }
+            if (usingSkip == false)
+            {
+                isReadyForNextDialog = true;
+            }
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.E) && isReadyForNextDialog);
         }
-        FindObjectOfType<OpenUIForDialogAndNote>().ClearDialog();
+        //FindObjectsOfType<OpenUIForDialogAndNote>().ClearDialog(dialogTextUI);
+
+        OpenUIForDialogAndNote[] allScript = FindObjectsByType<OpenUIForDialogAndNote>(FindObjectsSortMode.None);
+
+        foreach (OpenUIForDialogAndNote script in allScript)
+        {
+            if (script.SpecialCode == specialCode)
+            {
+                script.ClearDialog();
+            }
+        }
     }
 
     private void skipDialog(InputAction.CallbackContext callbackContext)
     {
         if (!isReadyForNextDialog)
         {
+            usingSkip = true;
+
             isReadyForNextDialog = false;
             dialogTextUI.text = currentDialog; // Display full dialog
             charIndex = currentDialog.Length; // Exit the loop
@@ -95,4 +118,5 @@ public class DialogTypewritterEffect : MonoBehaviour
     {
         isReadyForNextDialog = true;
     }
+
 }

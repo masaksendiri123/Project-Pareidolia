@@ -1910,6 +1910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsThisGameObjectForDialog: 0
+  SpecialCode: 
   textChatData: {fileID: 11400000, guid: 19ec43d67e51fd34daeb02cbd123c1e0, type: 2}
 --- !u!1 &1391690975
 GameObject:
@@ -2019,6 +2020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsThisGameObjectForDialog: 1
+  SpecialCode: TestingDialog
   textChatData: {fileID: 11400000, guid: 532b317a29eed4641818d321deb91a89, type: 2}
 --- !u!65 &1596090632
 BoxCollider:
