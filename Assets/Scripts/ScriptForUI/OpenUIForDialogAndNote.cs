@@ -9,6 +9,7 @@ public class OpenUIForDialogAndNote : MonoBehaviour
 
     //Untuk Ngecek Apakah Interacting Untuk Dialog Atau Note
     public bool IsThisGameObjectForDialog;
+    public string SpecialCode;
 
     //Menyimpan data Canvas UI dan TextChatData
     GameObject uiCanvas;
@@ -26,21 +27,21 @@ public class OpenUIForDialogAndNote : MonoBehaviour
     {
         if(IsThisGameObjectForDialog)
         {
-            uiCanvas = GameObject.FindGameObjectWithTag("ChatBoxUI");
             if (uiCanvasChildren.Count == 0)
             {
+                uiCanvas = GameObject.FindGameObjectWithTag("ChatBoxUI");
                 for (int i = 0; i < uiCanvas.transform.childCount; i++)
                 {
                     uiCanvasChildren.Add(uiCanvas.transform.GetChild(i).gameObject);
                     uiCanvasChildren[i].SetActive(true);
-                    Debug.Log("Child Added: " + uiCanvasChildren[i].name);
                 }
 
                 DialogTypewritterEffect dialogTypewritterEffect = uiCanvas.GetComponentInChildren<DialogTypewritterEffect>();
-                dialogTypewritterEffect.Write(textChatData.chatLines);
+                dialogTypewritterEffect.Write(textChatData.chatLines, SpecialCode);
                 Debug.Log("Started Writing Dialog");
 
                 textComponent = uiCanvas.GetComponentInChildren<TextMeshProUGUI>();
+                Debug.Log(textComponent);
                 FindObjectOfType<MovementStatusHandler>().CurrentMovementStatus = MovementStatusHandler.MovementStatus.Dialog;
             }
         }
@@ -66,7 +67,7 @@ public class OpenUIForDialogAndNote : MonoBehaviour
                 TextMeshProUGUI noteText = uiCanvas.GetComponentInChildren<TextMeshProUGUI>();
                 noteText.text = "";
 
-                for (int i = 0; i < uiCanvas.transform.childCount; i++)
+                for (int i = 0; i < uiCanvasChildren.Count; i++)
                 {
                     uiCanvasChildren[i].SetActive(false);
                 }
@@ -80,10 +81,12 @@ public class OpenUIForDialogAndNote : MonoBehaviour
     public void ClearDialog()
     {
         textComponent.text = "";
-        for (int i = 0; i < uiCanvasChildren.Count; i++)
+
+        for(int i = 0; i < uiCanvas.transform.childCount; i++)
         {
             uiCanvasChildren[i].SetActive(false);
         }
+
         uiCanvasChildren.Clear();
         FindObjectOfType<MovementStatusHandler>().CurrentMovementStatus = MovementStatusHandler.MovementStatus.CanMove;
     }
