@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -11,6 +12,7 @@ public class OpenUIForDialogAndNote : MonoBehaviour
 
     //Menyimpan data Canvas UI dan TextChatData
     GameObject uiCanvas;
+    TextMeshProUGUI textComponent;
     public TextChatData textChatData;
 
     List<GameObject> uiCanvasChildren = new List<GameObject>();
@@ -25,6 +27,22 @@ public class OpenUIForDialogAndNote : MonoBehaviour
         if(IsThisGameObjectForDialog)
         {
             uiCanvas = GameObject.FindGameObjectWithTag("ChatBoxUI");
+            if (uiCanvasChildren.Count == 0)
+            {
+                for (int i = 0; i < uiCanvas.transform.childCount; i++)
+                {
+                    uiCanvasChildren.Add(uiCanvas.transform.GetChild(i).gameObject);
+                    uiCanvasChildren[i].SetActive(true);
+                    Debug.Log("Child Added: " + uiCanvasChildren[i].name);
+                }
+
+                DialogTypewritterEffect dialogTypewritterEffect = uiCanvas.GetComponentInChildren<DialogTypewritterEffect>();
+                dialogTypewritterEffect.Write(textChatData.chatLines);
+                Debug.Log("Started Writing Dialog");
+
+                textComponent = uiCanvas.GetComponentInChildren<TextMeshProUGUI>();
+                FindObjectOfType<MovementStatusHandler>().CurrentMovementStatus = MovementStatusHandler.MovementStatus.Dialog;
+            }
         }
         else
         {
@@ -38,8 +56,8 @@ public class OpenUIForDialogAndNote : MonoBehaviour
                     uiCanvasChildren[i].SetActive(true);
                 }
 
-                TextMeshProUGUI noteText = uiCanvas.GetComponentInChildren<TextMeshProUGUI>();
-                noteText.text = textChatData.chatLines[0];
+                textComponent = uiCanvas.GetComponentInChildren<TextMeshProUGUI>();
+                textComponent.text = textChatData.chatLines[0];
                 FindObjectOfType<MovementStatusHandler>().CurrentMovementStatus = MovementStatusHandler.MovementStatus.CanNotMove;
             }
             else
@@ -57,5 +75,16 @@ public class OpenUIForDialogAndNote : MonoBehaviour
                 FindObjectOfType<MovementStatusHandler>().CurrentMovementStatus = MovementStatusHandler.MovementStatus.CanMove;
             }
         }
+    }
+
+    public void ClearDialog()
+    {
+        textComponent.text = "";
+        for (int i = 0; i < uiCanvasChildren.Count; i++)
+        {
+            uiCanvasChildren[i].SetActive(false);
+        }
+        uiCanvasChildren.Clear();
+        FindObjectOfType<MovementStatusHandler>().CurrentMovementStatus = MovementStatusHandler.MovementStatus.CanMove;
     }
 }

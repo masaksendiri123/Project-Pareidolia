@@ -7,7 +7,8 @@ public class MovementStatusHandler : MonoBehaviour
     public enum MovementStatus
     {
         CanMove,
-        CanNotMove
+        CanNotMove,
+        Dialog
     }
 
     public MovementStatus CurrentMovementStatus;
