@@ -34,6 +34,8 @@ public class DialogTypewritterEffect : MonoBehaviour
 
     [Header("Untuk Menyimpan Kalimat yang Sedang Ditampilkan")]
     private string currentDialog;
+    
+    private OpenUIForDialogAndNote.TypeOfThisTextUIObject typeOfThisTextUIObject;
     private string specialCode;
 
     private void Awake()
@@ -48,10 +50,11 @@ public class DialogTypewritterEffect : MonoBehaviour
     }
 
     // Memulai Proses Penulisan Dialog
-    public void Write(List<string> dialogs, string m_specialCode)
+    public void Write(List<string> dialogs, string m_specialCode, OpenUIForDialogAndNote.TypeOfThisTextUIObject  type)
     {
         dialogTextUI = GetComponent<TMPro.TextMeshProUGUI>();
         specialCode = m_specialCode;
+        typeOfThisTextUIObject = type;
         Coroutine m_writing = StartCoroutine(TypeWritterEffect(dialogs));
     }
 
@@ -70,8 +73,32 @@ public class DialogTypewritterEffect : MonoBehaviour
             for (charIndex = 0; charIndex < currentDialog.Length; charIndex++)
             {
                 char currentCharacter = currentDialog[charIndex];
-                dialogTextUI.text += currentCharacter; // Add character to UI 
+                string checkBRCommand  = "";
 
+                for (int i = 0; i < 4; (i)++)
+                {
+                    if (charIndex + i < currentDialog.Length)
+                    {
+                        checkBRCommand += currentDialog[charIndex + i].ToString();
+                    }
+                    else break;
+                }
+
+                if (checkBRCommand == "<br>")
+                {
+                    dialogTextUI.text += "<br>";
+                    charIndex += 3;
+                }
+                else
+                {
+                    dialogTextUI.text += currentCharacter; // Add character to UI 
+                }
+
+                if (typeOfThisTextUIObject  == OpenUIForDialogAndNote.TypeOfThisTextUIObject.TextScene)
+                {
+                    FindObjectOfType<AudioManager>().Play("KeyboardClickSound");
+                }
+                
                 if (currentCharacter == '.' || currentCharacter == ',' || currentCharacter == '!' || currentCharacter == '?')
                 {
 

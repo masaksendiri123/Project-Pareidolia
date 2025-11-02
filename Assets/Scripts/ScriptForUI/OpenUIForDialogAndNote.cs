@@ -3,12 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OpenUIForDialogAndNote : MonoBehaviour
 {
 
     //Untuk Ngecek Apakah Interacting Untuk Dialog Atau Note
-    public bool IsThisGameObjectForDialog;
+    public enum TypeOfThisTextUIObject
+    {
+        Dialog,
+        NoteBox,
+        TextScene
+    }
+    
+    public TypeOfThisTextUIObject currentTypeOfThisTextUIObject;
     public string SpecialCode;
 
     //Menyimpan data Canvas UI dan TextChatData
@@ -25,7 +33,7 @@ public class OpenUIForDialogAndNote : MonoBehaviour
 
     public void OnInteract()
     {
-        if(IsThisGameObjectForDialog)
+        if(currentTypeOfThisTextUIObject ==  TypeOfThisTextUIObject.Dialog)
         {
             if (uiCanvasChildren.Count == 0)
             {
@@ -37,7 +45,7 @@ public class OpenUIForDialogAndNote : MonoBehaviour
                 }
 
                 DialogTypewritterEffect dialogTypewritterEffect = uiCanvas.GetComponentInChildren<DialogTypewritterEffect>();
-                dialogTypewritterEffect.Write(textChatData.chatLines, SpecialCode);
+                dialogTypewritterEffect.Write(textChatData.chatLines, SpecialCode, currentTypeOfThisTextUIObject);
                 Debug.Log("Started Writing Dialog");
 
                 textComponent = uiCanvas.GetComponentInChildren<TextMeshProUGUI>();
@@ -45,7 +53,7 @@ public class OpenUIForDialogAndNote : MonoBehaviour
                 FindObjectOfType<MovementStatusHandler>().CurrentMovementStatus = MovementStatusHandler.MovementStatus.Dialog;
             }
         }
-        else
+        else if(currentTypeOfThisTextUIObject ==  TypeOfThisTextUIObject.NoteBox)
         {
             uiCanvas = GameObject.FindGameObjectWithTag("NoteBoxUI");
 
@@ -74,6 +82,28 @@ public class OpenUIForDialogAndNote : MonoBehaviour
 
                 uiCanvasChildren.Clear();
                 FindObjectOfType<MovementStatusHandler>().CurrentMovementStatus = MovementStatusHandler.MovementStatus.CanMove;
+            }
+        }
+        else if (currentTypeOfThisTextUIObject == TypeOfThisTextUIObject.TextScene)
+        {
+            if (uiCanvasChildren.Count == 0)
+            {
+                uiCanvas = GameObject.FindGameObjectWithTag("NoteBoxUI");
+
+                for (int i = 0; i < uiCanvas.transform.childCount; i++)
+                {
+                    uiCanvasChildren.Add(uiCanvas.transform.GetChild(i).gameObject);
+                    uiCanvasChildren[i].SetActive(true);
+                
+                }
+            
+                DialogTypewritterEffect dialogTypewritterEffect = uiCanvas.GetComponentInChildren<DialogTypewritterEffect>();
+                dialogTypewritterEffect.Write(textChatData.chatLines, SpecialCode, currentTypeOfThisTextUIObject);
+                Debug.Log("Started Writing Text In Scene");
+
+                textComponent = uiCanvas.GetComponentInChildren<TextMeshProUGUI>();
+                Debug.Log(textComponent);
+                FindObjectOfType<MovementStatusHandler>().CurrentMovementStatus = MovementStatusHandler.MovementStatus.Scene;
             }
         }
     }

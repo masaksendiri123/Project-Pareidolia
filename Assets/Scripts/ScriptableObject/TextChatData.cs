@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Properties;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "TextChatData", menuName = "TextChatData/Text Chat Data", order = 1)]
 

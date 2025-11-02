@@ -8,7 +8,8 @@ public class MovementStatusHandler : MonoBehaviour
     {
         CanMove,
         CanNotMove,
-        Dialog
+        Dialog,
+        Scene
     }
 
     public MovementStatus CurrentMovementStatus;
