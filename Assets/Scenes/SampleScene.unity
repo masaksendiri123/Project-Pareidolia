@@ -1540,7 +1540,7 @@ GameObject:
   - component: {fileID: 998015409}
   m_Layer: 5
   m_Name: TextScene
-  m_TagString: NoteBoxUI
+  m_TagString: SceneTextUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2140,8 +2140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67957744419340745b10137da6a44471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTypeOfThisTextUIObject: 0
-  SpecialCode: 
+  currentTypeOfThisTextUIObject: 1
+  SpecialCode: NoteBoxTesting
   textChatData: {fileID: 11400000, guid: 19ec43d67e51fd34daeb02cbd123c1e0, type: 2}
 --- !u!1 &1391690975
 GameObject:
@@ -2976,26 +2976,25 @@ MonoBehaviour:
 
     20:46\n
 
-    
 
-    My name is Evan Cross, a
-    journalist at The Halcyon Report. on this very day I have been tasked to investigate
-    a missing person case by my agency. Usually the police handle such tasks but
-    it seemed our team wanted a more hands on approach. Hence, I ended up here. At
-    a desolate place searching for any lead about the last known locations of "Daniel
-    Hughes" or so the people thought.\n
 
-    
+    My name is Evan Cross, a journalist
+    at The Halcyon Report. on this very day I have been tasked to investigate a missing
+    person case by my agency. Usually the police handle such tasks but it seemed
+    our team wanted a more hands on approach. Hence, I ended up here. At a desolate
+    place searching for any lead about the last known locations of "Daniel Hughes"
+    or so the people thought.\n
 
-    [Truth is, I was the one who
-    killed him.]\n
 
-    
 
-    It was an accident I had a few days prior to this
-    that just so happened to be the case I am reporting. Somehow, I managed to bury
-    the truth to the ground just barely. The only reason I came here was to make
-    sure it stays that way.'
+    [Truth is, I was the one who killed him.]\n
+
+
+
+    It
+    was an accident I had a few days prior to this that just so happened to be the
+    case I am reporting. Somehow, I managed to bury the truth to the ground just
+    barely. The only reason I came here was to make sure it stays that way.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
