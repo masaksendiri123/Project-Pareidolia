@@ -30,16 +30,26 @@ Project Pareidolia adalah prototipe game Unity (single scene) yang dibuat untuk 
   - Scenes/
     - SampleScene.unity (scene utama saat ini)
   - Scripts/
-    - CameraScript.cs (kontrol kamera, mengunci kursor, rotasi kamera & orientasi badan)
-    - MovingCamera.cs (memindahkan transform ke `cameraPosition` setiap frame)
-    - CharacterMovement.cs (kontrol gerak karakter via Input System)
+    - CharacterMovement/
+      - CharacterMovement.cs (kontrol gerak karakter via Input System)
+      - CameraScript.cs (kontrol kamera, kunci kursor, rotasi kamera & orientasi badan)
+      - MovementStatusHandler.cs (mengelola status gerak: jalan/lari/diam)
+      - MoveCameraToCharacter.cs (memindahkan kamera ke target `cameraPosition` tiap frame)
+    - ScriptForUI/
+      - OpenUIForDialogAndNote.cs (buka UI untuk dialog & catatan)
+      - DialogTypewritterEffect.cs (efek pengetikan teks dialog)
+    - ScriptableObject/
+      - TextChatData.cs (data dialog/teks berbasis ScriptableObject)
     - ObjectRaycastInteraction.cs (raycast untuk interaksi objek)
     - OnOffFlashlightScript.cs (toggle flashlight yang dipegang karakter)
-    - PlayerInputAction.inputactions (aset Input System)
+    - AudioManager.cs (pengelola pemutaran audio)
+    - Sound.cs (definisi klip/saluran suara)
   - ExternalPackages/
-    - Day-Night Skyboxes (skybox)
+    - Day-Night Skyboxes/ (skybox)
   - UIAsset/
-    - Sprite/Crosshair.png (crosshair sementara)
+    - Sprite/
+      - Crosshair.png (crosshair sementara)
+  - TextMesh Pro/ (font, shader, resources TMP)
 - Packages/
   - manifest.json (daftar paket UPM)
 - ProjectSettings/
