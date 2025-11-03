@@ -88,7 +88,7 @@ public class OpenUIForDialogAndNote : MonoBehaviour
         {
             if (uiCanvasChildren.Count == 0)
             {
-                uiCanvas = GameObject.FindGameObjectWithTag("NoteBoxUI");
+                uiCanvas = GameObject.FindGameObjectWithTag("SceneTextUI");
 
                 for (int i = 0; i < uiCanvas.transform.childCount; i++)
                 {
