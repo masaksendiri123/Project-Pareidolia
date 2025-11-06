@@ -54,3 +54,4 @@ Project Pareidolia adalah prototipe game Unity (single scene) yang dibuat untuk 
   - manifest.json (daftar paket UPM)
 - ProjectSettings/
   - ProjectVersion.txt (versi editor Unity: 2022.3.62f1)
+Testing
