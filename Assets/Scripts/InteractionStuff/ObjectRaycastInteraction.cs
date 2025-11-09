@@ -57,7 +57,14 @@ public class ObjectRaycastInteraction : MonoBehaviour
         {
             if (m_raycastHitInteract.collider.CompareTag("Interactable"))
             {
-                m_raycastHitInteract.collider.GetComponent<OpenUIForDialogAndNote>().OnInteract();
+                if (m_raycastHitInteract.collider.GetComponent<OpenUIForDialogAndNote>())
+                {
+                    m_raycastHitInteract.collider.GetComponent<OpenUIForDialogAndNote>().OnInteract();
+                }
+                if (m_raycastHitInteract.collider.GetComponent<TakingEvidenceItem>())
+                {
+                    m_raycastHitInteract.collider.GetComponent<TakingEvidenceItem>().OnInteract();
+                }
             }
         }
     }

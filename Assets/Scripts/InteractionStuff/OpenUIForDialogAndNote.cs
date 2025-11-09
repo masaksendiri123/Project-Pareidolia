@@ -19,6 +19,8 @@ public class OpenUIForDialogAndNote : MonoBehaviour
     public TypeOfThisTextUIObject currentTypeOfThisTextUIObject;
     public string SpecialCode;
 
+    public string FunctionToCallAfterDialogOrTextSceneFinished;
+
     //Menyimpan data Canvas UI dan TextChatData
     GameObject uiCanvas;
     TextMeshProUGUI textComponent;
@@ -82,6 +84,10 @@ public class OpenUIForDialogAndNote : MonoBehaviour
 
                 uiCanvasChildren.Clear();
                 FindObjectOfType<MovementStatusHandler>().CurrentMovementStatus = MovementStatusHandler.MovementStatus.CanMove;
+                if (FunctionToCallAfterDialogOrTextSceneFinished != "")
+                {
+                    FindObjectOfType<StoryManager>().SendMessage(FunctionToCallAfterDialogOrTextSceneFinished);
+                }
             }
         }
         else if (currentTypeOfThisTextUIObject == TypeOfThisTextUIObject.TextScene)
@@ -104,6 +110,7 @@ public class OpenUIForDialogAndNote : MonoBehaviour
                 textComponent = uiCanvas.GetComponentInChildren<TextMeshProUGUI>();
                 Debug.Log(textComponent);
                 FindObjectOfType<MovementStatusHandler>().CurrentMovementStatus = MovementStatusHandler.MovementStatus.Scene;
+                //Debug.Log(FindObjectOfType<MovementStatusHandler>().CurrentMovementStatus);
             }
         }
     }
@@ -119,5 +126,10 @@ public class OpenUIForDialogAndNote : MonoBehaviour
 
         uiCanvasChildren.Clear();
         FindObjectOfType<MovementStatusHandler>().CurrentMovementStatus = MovementStatusHandler.MovementStatus.CanMove;
+
+        if (FunctionToCallAfterDialogOrTextSceneFinished != "")
+        {
+            FindObjectOfType<StoryManager>().SendMessage(FunctionToCallAfterDialogOrTextSceneFinished);
+        }
     }
 }
