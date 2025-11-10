@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 319331088}
   - component: {fileID: 319331087}
   - component: {fileID: 319331086}
-  - component: {fileID: 319331085}
+  - component: {fileID: 319331090}
   m_Layer: 0
   m_Name: CleanEvidence (3)
   m_TagString: Interactable
@@ -194,22 +194,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &319331085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319331084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67957744419340745b10137da6a44471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTypeOfThisTextUIObject: 2
-  SpecialCode: TextSceneOpening1
-  FunctionToCallAfterDialogOrTextSceneFinished: 
-  textChatData: {fileID: 11400000, guid: 169d0f5deef8cbf4bb0f5fbd337b0055, type: 2}
 --- !u!65 &319331086
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -296,6 +280,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &319331090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319331084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04c6f89302f42948ac1596cb8a5dbc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &320791516
 GameObject:
   m_ObjectHideFlags: 0
@@ -1069,11 +1065,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tasks:
-  - NamaTask: MembersihkanTKP
-    TextYangDitampilkanTask: Bersihkan Tempat Kejadian Pembunuhan Dari Barang Bukti
+  - NamaTask: ClearingTheCrashSite
+    TextYangDitampilkanTask: Kumpulkan Seluruh Barang Bukti
     NamaFunctionYangDijalankanSetelahTaskSelesai: DoneClearingTheCrashSite
-  - NamaTask: KembaliMenujuKerumah
-    TextYangDitampilkanTask: Kembali Pergi Ke Mobil dan Lupakan Yang Terjadi
+  - NamaTask: DoneClearingTheCrashSite
+    TextYangDitampilkanTask: Pergi Ke mobil Untuk Pergi dari tempat Kejadian perkara
     NamaFunctionYangDijalankanSetelahTaskSelesai: DoneKaburDariTKPNaikMobil
   OpeningScene: {fileID: 1672562571}
   Ending1Scene: {fileID: 1986545529}
@@ -1352,7 +1348,7 @@ GameObject:
   - component: {fileID: 743917073}
   - component: {fileID: 743917072}
   - component: {fileID: 743917071}
-  - component: {fileID: 743917070}
+  - component: {fileID: 743917075}
   m_Layer: 0
   m_Name: CleanEvidence (4)
   m_TagString: Interactable
@@ -1360,22 +1356,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &743917070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 743917069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67957744419340745b10137da6a44471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTypeOfThisTextUIObject: 2
-  SpecialCode: TextSceneOpening1
-  FunctionToCallAfterDialogOrTextSceneFinished: 
-  textChatData: {fileID: 11400000, guid: 169d0f5deef8cbf4bb0f5fbd337b0055, type: 2}
 --- !u!65 &743917071
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1462,6 +1442,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &743917075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743917069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04c6f89302f42948ac1596cb8a5dbc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &814653506
 GameObject:
   m_ObjectHideFlags: 0
@@ -3082,7 +3074,7 @@ GameObject:
   - component: {fileID: 1331457718}
   - component: {fileID: 1331457717}
   - component: {fileID: 1331457716}
-  - component: {fileID: 1331457715}
+  - component: {fileID: 1331457720}
   m_Layer: 0
   m_Name: CleanEvidence (2)
   m_TagString: Interactable
@@ -3090,22 +3082,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1331457715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1331457714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67957744419340745b10137da6a44471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTypeOfThisTextUIObject: 2
-  SpecialCode: TextSceneOpening1
-  FunctionToCallAfterDialogOrTextSceneFinished: 
-  textChatData: {fileID: 11400000, guid: 169d0f5deef8cbf4bb0f5fbd337b0055, type: 2}
 --- !u!65 &1331457716
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3192,6 +3168,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1331457720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331457714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04c6f89302f42948ac1596cb8a5dbc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1345525185
 GameObject:
   m_ObjectHideFlags: 0
@@ -3794,7 +3782,7 @@ GameObject:
   - component: {fileID: 1782816288}
   - component: {fileID: 1782816287}
   - component: {fileID: 1782816286}
-  - component: {fileID: 1782816285}
+  - component: {fileID: 1782816290}
   m_Layer: 0
   m_Name: CleanEvidence (1)
   m_TagString: Interactable
@@ -3802,22 +3790,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1782816285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782816284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67957744419340745b10137da6a44471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTypeOfThisTextUIObject: 2
-  SpecialCode: TextSceneOpening1
-  FunctionToCallAfterDialogOrTextSceneFinished: 
-  textChatData: {fileID: 11400000, guid: 169d0f5deef8cbf4bb0f5fbd337b0055, type: 2}
 --- !u!65 &1782816286
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3904,6 +3876,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1782816290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782816284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04c6f89302f42948ac1596cb8a5dbc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1818732453
 GameObject:
   m_ObjectHideFlags: 0
@@ -4237,7 +4221,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1945181709
 RectTransform:
   m_ObjectHideFlags: 0
