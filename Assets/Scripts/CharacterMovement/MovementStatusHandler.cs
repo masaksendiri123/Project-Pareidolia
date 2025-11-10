@@ -13,4 +13,9 @@ public class MovementStatusHandler : MonoBehaviour
     }
 
     public MovementStatus CurrentMovementStatus;
+
+    private void Start()
+    {
+        CurrentMovementStatus = MovementStatus.CanMove;
+    }
 }
