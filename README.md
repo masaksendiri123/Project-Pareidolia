@@ -54,4 +54,7 @@ Project Pareidolia adalah prototipe game Unity (single scene) yang dibuat untuk 
   - manifest.json (daftar paket UPM)
 - ProjectSettings/
   - ProjectVersion.txt (versi editor Unity: 2022.3.62f1)
-Testing
+
+## TODO
+- TestingMechanicsScene: Fix textChatData.chatLines (textChatData or chatLines, one or the other) is null in 
+  TextScene. Need Idris to investigate.
