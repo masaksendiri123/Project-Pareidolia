@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 319331088}
   - component: {fileID: 319331087}
   - component: {fileID: 319331086}
-  - component: {fileID: 319331085}
+  - component: {fileID: 319331090}
   m_Layer: 0
   m_Name: CleanEvidence (3)
   m_TagString: Interactable
@@ -194,21 +194,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &319331085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319331084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67957744419340745b10137da6a44471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTypeOfThisTextUIObject: 2
-  SpecialCode: TextSceneOpening1
-  textChatData: {fileID: 11400000, guid: 169d0f5deef8cbf4bb0f5fbd337b0055, type: 2}
 --- !u!65 &319331086
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -295,6 +280,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &319331090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319331084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04c6f89302f42948ac1596cb8a5dbc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &320791516
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,7 +1338,7 @@ GameObject:
   - component: {fileID: 743917073}
   - component: {fileID: 743917072}
   - component: {fileID: 743917071}
-  - component: {fileID: 743917070}
+  - component: {fileID: 743917075}
   m_Layer: 0
   m_Name: CleanEvidence (4)
   m_TagString: Interactable
@@ -1349,21 +1346,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &743917070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 743917069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67957744419340745b10137da6a44471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTypeOfThisTextUIObject: 2
-  SpecialCode: TextSceneOpening1
-  textChatData: {fileID: 11400000, guid: 169d0f5deef8cbf4bb0f5fbd337b0055, type: 2}
 --- !u!65 &743917071
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1450,6 +1432,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &743917075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743917069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04c6f89302f42948ac1596cb8a5dbc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2091,6 +2085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTypeOfThisTextUIObject: 2
   SpecialCode: TextSceneOpening1
+  FunctionToCallAfterDialogOrTextSceneFinished: 
   textChatData: {fileID: 11400000, guid: 169d0f5deef8cbf4bb0f5fbd337b0055, type: 2}
 --- !u!65 &1066233173
 BoxCollider:
@@ -2373,6 +2368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTypeOfThisTextUIObject: 2
   SpecialCode: Old Man
+  FunctionToCallAfterDialogOrTextSceneFinished: 
   textChatData: {fileID: 11400000, guid: ab332374e781586408cc8ad716ec6444, type: 2}
 --- !u!1 &1223696281
 GameObject:
@@ -2676,6 +2672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTypeOfThisTextUIObject: 1
   SpecialCode: NoteBoxTesting
+  FunctionToCallAfterDialogOrTextSceneFinished: 
   textChatData: {fileID: 11400000, guid: 19ec43d67e51fd34daeb02cbd123c1e0, type: 2}
 --- !u!1 &1310045915
 GameObject:
@@ -2708,6 +2705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTypeOfThisTextUIObject: 2
   SpecialCode: Ending2Scene
+  FunctionToCallAfterDialogOrTextSceneFinished: 
   textChatData: {fileID: 11400000, guid: 17e8ede9ec7797d44a74d66f8941b9b4, type: 2}
 --- !u!4 &1310045917
 Transform:
@@ -2736,7 +2734,7 @@ GameObject:
   - component: {fileID: 1331457718}
   - component: {fileID: 1331457717}
   - component: {fileID: 1331457716}
-  - component: {fileID: 1331457715}
+  - component: {fileID: 1331457720}
   m_Layer: 0
   m_Name: CleanEvidence (2)
   m_TagString: Interactable
@@ -2744,21 +2742,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1331457715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1331457714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67957744419340745b10137da6a44471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTypeOfThisTextUIObject: 2
-  SpecialCode: TextSceneOpening1
-  textChatData: {fileID: 11400000, guid: 169d0f5deef8cbf4bb0f5fbd337b0055, type: 2}
 --- !u!65 &1331457716
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2845,6 +2828,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1331457720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331457714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04c6f89302f42948ac1596cb8a5dbc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1391690975
 GameObject:
   m_ObjectHideFlags: 0
@@ -2954,6 +2949,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTypeOfThisTextUIObject: 0
   SpecialCode: TestingDialog
+  FunctionToCallAfterDialogOrTextSceneFinished: 
   textChatData: {fileID: 11400000, guid: 532b317a29eed4641818d321deb91a89, type: 2}
 --- !u!65 &1596090632
 BoxCollider:
@@ -3239,6 +3235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTypeOfThisTextUIObject: 2
   SpecialCode: OpeningSceneUIAtStart
+  FunctionToCallAfterDialogOrTextSceneFinished: 
   textChatData: {fileID: 11400000, guid: 169d0f5deef8cbf4bb0f5fbd337b0055, type: 2}
 --- !u!4 &1672562572
 Transform:
@@ -3342,7 +3339,7 @@ GameObject:
   - component: {fileID: 1782816288}
   - component: {fileID: 1782816287}
   - component: {fileID: 1782816286}
-  - component: {fileID: 1782816285}
+  - component: {fileID: 1782816290}
   m_Layer: 0
   m_Name: CleanEvidence (1)
   m_TagString: Interactable
@@ -3350,21 +3347,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1782816285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782816284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67957744419340745b10137da6a44471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentTypeOfThisTextUIObject: 2
-  SpecialCode: TextSceneOpening1
-  textChatData: {fileID: 11400000, guid: 169d0f5deef8cbf4bb0f5fbd337b0055, type: 2}
 --- !u!65 &1782816286
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3451,6 +3433,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1782816290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782816284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04c6f89302f42948ac1596cb8a5dbc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1818732453
 GameObject:
   m_ObjectHideFlags: 0
@@ -3662,6 +3656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTypeOfThisTextUIObject: 2
   SpecialCode: Ending1Scene
+  FunctionToCallAfterDialogOrTextSceneFinished: 
   textChatData: {fileID: 11400000, guid: e3a22d71cd0b0db43a834c8746bd4f6c, type: 2}
 --- !u!4 &1986545530
 Transform:
