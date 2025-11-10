@@ -61,9 +61,9 @@ public class ObjectRaycastInteraction : MonoBehaviour
                 {
                     m_raycastHitInteract.collider.GetComponent<OpenUIForDialogAndNote>().OnInteract();
                 }
-                if (m_raycastHitInteract.collider.GetComponent<TakingEvidenceItem>())
+                if (m_raycastHitInteract.collider.GetComponent<ProgressObjectiveScript>())
                 {
-                    m_raycastHitInteract.collider.GetComponent<TakingEvidenceItem>().OnInteract();
+                    m_raycastHitInteract.collider.GetComponent<ProgressObjectiveScript>().OnInteract();
                 }
             }
         }
