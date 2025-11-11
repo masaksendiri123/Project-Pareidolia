@@ -4,6 +4,7 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StoryManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class StoryManager : MonoBehaviour
     public OpenUIForDialogAndNote OpeningScene;
     public OpenUIForDialogAndNote Ending1Scene;
     public OpenUIForDialogAndNote Ending2Scene;
+    public OpenUIForDialogAndNote SceneTextKetikaMasukMobil;
 
     [Header("UI Task")]
     public GameObject ProgressObjective;
@@ -23,6 +25,13 @@ public class StoryManager : MonoBehaviour
     public void AddingProgressObjective()
     {
         ProgressObjective.GetComponent<ObjectiveUIScript>().UpdateObjectiveCount();
+    }
+
+    public void DoneDoCompletionObjective()
+    {
+        Debug.Log("Di Story manager");
+
+        CompletionObjective.GetComponent<ObjectiveUIScript>().ClearObjective("");
     }
 
     private (string namaTask, string textYangDitampilkanDiTask, string namaFunctionYangDijalankanSetelahTask) MendapatkanDataDariArrayTasks(string m_namaFunction)
@@ -40,9 +49,9 @@ public class StoryManager : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Story Dimulai");
-        OpeningScene.OnInteract();
-        ClearingTheCrashSite();
+            Debug.Log("Story Dimulai");
+            OpeningScene.OnInteract(); //Untuk Buka Scene Text Opening
+            ClearingTheCrashSite();
     }
 
 
@@ -55,7 +64,6 @@ public class StoryManager : MonoBehaviour
     {
         var dataTask = MendapatkanDataDariArrayTasks(MethodBase.GetCurrentMethod().Name);
         int jumlahProgressObjective = FindAnyObjectByType<ProgressObjectiveManager>().totalSeluruhSampah;
-        Debug.Log(jumlahProgressObjective);
         ProgressObjective.GetComponent<ObjectiveUIScript>().SetObjective(dataTask.textYangDitampilkanDiTask, jumlahProgressObjective, dataTask.namaFunctionYangDijalankanSetelahTask, tipeObjectiveProgress);
     }
 
@@ -70,8 +78,33 @@ public class StoryManager : MonoBehaviour
 
     public void DoneKaburDariTKPNaikMobil()
     {
-        //Masukin script untuk nutup Quest pergi dari TKP naik mobil
+        SceneTextKetikaMasukMobil.OnInteract();
 
-        //Masukin Script untuk buka Text Scene mengenai dia mendapat tugas untuk menginvestigasi kasus ia sendiri
+        //SceneManager.LoadScene("CityAreaScene");
+        //PergiKeRumahKorban();
+    }
+
+    public void PergiKeRumahKorban()
+    {
+        SceneTextKetikaMasukMobil.OnInteract();
+
+        var dataTask = MendapatkanDataDariArrayTasks(MethodBase.GetCurrentMethod().Name);
+        int jumlahProgressObjective = FindAnyObjectByType<ProgressObjectiveManager>().totalSeluruhSampah;
+        CompletionObjective.GetComponent<ObjectiveUIScript>().SetObjective(dataTask.textYangDitampilkanDiTask, jumlahProgressObjective, dataTask.namaFunctionYangDijalankanSetelahTask, tipeObjectiveCompletion);
+    }
+
+    public void MasukRumah()
+    {
+        SceneManager.LoadScene("RumahKorban");
+        WawancaraKeluaraga();
+    }
+
+    public void WawancaraKeluaraga()
+    {
+        SceneTextKetikaMasukMobil.OnInteract();
+
+        var dataTask = MendapatkanDataDariArrayTasks(MethodBase.GetCurrentMethod().Name);
+        int jumlahProgressObjective = FindAnyObjectByType<ProgressObjectiveManager>().totalSeluruhSampah;
+        CompletionObjective.GetComponent<ObjectiveUIScript>().SetObjective(dataTask.textYangDitampilkanDiTask, jumlahProgressObjective, dataTask.namaFunctionYangDijalankanSetelahTask, tipeObjectiveCompletion);
     }
 }
