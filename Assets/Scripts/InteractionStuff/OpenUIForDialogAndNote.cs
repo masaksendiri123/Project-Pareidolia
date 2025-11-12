@@ -3,10 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class OpenUIForDialogAndNote : MonoBehaviour
 {
+
+    public UnityEvent MenuliskanFakeReportUI = null;
 
     //Untuk Ngecek Apakah Interacting Untuk Dialog Atau Note
     public enum TypeOfThisTextUIObject
@@ -131,5 +134,6 @@ public class OpenUIForDialogAndNote : MonoBehaviour
         {
             FindObjectOfType<StoryManager>().SendMessage(FunctionToCallAfterDialogOrTextSceneFinished);
         }
+        MenuliskanFakeReportUI.Invoke();
     }
 }
