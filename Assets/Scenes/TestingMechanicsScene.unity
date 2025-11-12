@@ -349,6 +349,7 @@ MonoBehaviour:
     type: 3}
   FakeReportUIPage: {fileID: 1997608687}
   NotificationFakeReportBaru: {fileID: 1235620573}
+  Tulisan: {fileID: 0}
 --- !u!1 &286097621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1789,6 +1790,7 @@ MonoBehaviour:
   OpenFakeReportUIAction: {fileID: 0}
   FakeReportUIPage: {fileID: 0}
   NotificationFakeReportBaru: {fileID: 1235620573}
+  Tulisan: {fileID: 683514848}
 --- !u!1 &700878880
 GameObject:
   m_ObjectHideFlags: 0
@@ -2112,6 +2114,7 @@ MonoBehaviour:
   OpenFakeReportUIAction: {fileID: 0}
   FakeReportUIPage: {fileID: 0}
   NotificationFakeReportBaru: {fileID: 1235620573}
+  Tulisan: {fileID: 804220267}
 --- !u!222 &804220269
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3102,19 +3105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MenuliskanFakeReportUI:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1086110180}
-        m_TargetAssemblyTypeName: FakeReportUIRevealAndNotification, Assembly-CSharp
-        m_MethodName: FakeReportDiungkap
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   currentTypeOfThisTextUIObject: 2
   SpecialCode: TextSceneOpening1
   FunctionToCallAfterDialogOrTextSceneFinished: 
@@ -3270,6 +3261,7 @@ MonoBehaviour:
   OpenFakeReportUIAction: {fileID: 0}
   FakeReportUIPage: {fileID: 0}
   NotificationFakeReportBaru: {fileID: 1235620573}
+  Tulisan: {fileID: 1086110178}
 --- !u!1 &1093311345
 GameObject:
   m_ObjectHideFlags: 0
@@ -4411,6 +4403,7 @@ MonoBehaviour:
   OpenFakeReportUIAction: {fileID: 0}
   FakeReportUIPage: {fileID: 0}
   NotificationFakeReportBaru: {fileID: 1235620573}
+  Tulisan: {fileID: 1445368455}
 --- !u!222 &1445368457
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4675,18 +4668,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1086110180}
-        m_TargetAssemblyTypeName: FakeReportUIRevealAndNotification, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   currentTypeOfThisTextUIObject: 0
   SpecialCode: TestingDialog
   FunctionToCallAfterDialogOrTextSceneFinished: 
@@ -4929,6 +4910,7 @@ MonoBehaviour:
   OpenFakeReportUIAction: {fileID: 0}
   FakeReportUIPage: {fileID: 0}
   NotificationFakeReportBaru: {fileID: 1235620573}
+  Tulisan: {fileID: 1653625257}
 --- !u!1 &1671794159
 GameObject:
   m_ObjectHideFlags: 0
@@ -5858,6 +5840,7 @@ MonoBehaviour:
   OpenFakeReportUIAction: {fileID: 0}
   FakeReportUIPage: {fileID: 0}
   NotificationFakeReportBaru: {fileID: 1235620573}
+  Tulisan: {fileID: 1889868477}
 --- !u!222 &1889868479
 CanvasRenderer:
   m_ObjectHideFlags: 0
