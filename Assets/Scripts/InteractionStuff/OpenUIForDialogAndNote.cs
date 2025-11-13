@@ -91,6 +91,13 @@ public class OpenUIForDialogAndNote : MonoBehaviour
                 {
                     FindObjectOfType<StoryManager>().SendMessage(FunctionToCallAfterDialogOrTextSceneFinished);
                 }
+
+                if (FunctionToCallAfterDialogOrTextSceneFinished != "")
+                {
+                    FindObjectOfType<StoryManager>().SendMessage(FunctionToCallAfterDialogOrTextSceneFinished);
+                }
+
+                MenuliskanFakeReportUI.Invoke();
             }
         }
         else if (currentTypeOfThisTextUIObject == TypeOfThisTextUIObject.TextScene)
@@ -134,6 +141,7 @@ public class OpenUIForDialogAndNote : MonoBehaviour
         {
             FindObjectOfType<StoryManager>().SendMessage(FunctionToCallAfterDialogOrTextSceneFinished);
         }
+
         MenuliskanFakeReportUI.Invoke();
     }
 }

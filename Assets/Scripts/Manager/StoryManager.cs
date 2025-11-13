@@ -17,6 +17,7 @@ public class StoryManager : MonoBehaviour
     public OpenUIForDialogAndNote Ending1Scene;
     public OpenUIForDialogAndNote Ending2Scene;
     public OpenUIForDialogAndNote SceneTextKetikaMasukMobil;
+    public OpenUIForDialogAndNote ScenTextKetikaMasukRumah;
 
     [Header("UI Task")]
     public GameObject ProgressObjective;
@@ -46,12 +47,17 @@ public class StoryManager : MonoBehaviour
         return ("", "", "");
     }
 
+    void Awake()
+    {
+        // Supaya GameObject ini tidak dihancurkan saat load scene baru
+        DontDestroyOnLoad(gameObject);
+    }
 
     private void Start()
     {
-            Debug.Log("Story Dimulai");
-            OpeningScene.OnInteract(); //Untuk Buka Scene Text Opening
-            ClearingTheCrashSite();
+        Debug.Log("Story Dimulai");
+        OpeningScene.OnInteract(); //Untuk Buka Scene Text Opening
+        ClearingTheCrashSite();
     }
 
 
@@ -69,8 +75,6 @@ public class StoryManager : MonoBehaviour
 
     public void DoneClearingTheCrashSite()
     {
-        Debug.Log(MethodBase.GetCurrentMethod().Name);
-
         var dataTask = MendapatkanDataDariArrayTasks(MethodBase.GetCurrentMethod().Name);
         int jumlahProgressObjective = FindAnyObjectByType<ProgressObjectiveManager>().totalSeluruhSampah;
         CompletionObjective.GetComponent<ObjectiveUIScript>().SetObjective(dataTask.textYangDitampilkanDiTask, jumlahProgressObjective, dataTask.namaFunctionYangDijalankanSetelahTask, tipeObjectiveCompletion);
@@ -78,7 +82,9 @@ public class StoryManager : MonoBehaviour
 
     public void DoneKaburDariTKPNaikMobil()
     {
-        SceneTextKetikaMasukMobil.OnInteract();
+        //SceneTextKetikaMasukMobil.OnInteract();
+
+        SceneManager.LoadScene("CityAreaScene");
 
         //SceneManager.LoadScene("CityAreaScene");
         //PergiKeRumahKorban();
