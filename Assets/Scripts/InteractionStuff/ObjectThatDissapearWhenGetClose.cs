@@ -1,28 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ObjectThatDissapearWhenGetClose : MonoBehaviour
 {
-    public float distanceToDissapear = 3f;
-    private Transform playerTransform;
-    private void Start()
+
+    public UnityEvent HappeningAfterGetCose;
+
+    private void OnTriggerEnter(Collider other)
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null)
+        if (other.CompareTag("Player"))
         {
-            playerTransform = player.transform;
-        }
-    }
-    private void Update()
-    {
-        if (playerTransform != null)
-        {
-            float distance = Vector3.Distance(transform.position, playerTransform.position);
-            if (distance <= distanceToDissapear)
-            {
-                gameObject.SetActive(false);
-            }
+            HappeningAfterGetCose.Invoke();
+            Destroy(gameObject);
         }
     }
 }
