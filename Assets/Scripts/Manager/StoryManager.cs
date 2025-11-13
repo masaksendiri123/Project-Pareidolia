@@ -47,10 +47,25 @@ public class StoryManager : MonoBehaviour
         return ("", "", "");
     }
 
+
+    //Harus Diubah Manual
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "TestingMechanics")
+        {
+            PergiKeRumahKorban();
+        }
+        else if (scene.name == "")
+        {
+
+        }
+    }
+
     void Awake()
     {
         // Supaya GameObject ini tidak dihancurkan saat load scene baru
         DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void Start()
