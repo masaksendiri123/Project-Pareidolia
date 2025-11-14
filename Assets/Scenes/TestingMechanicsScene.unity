@@ -633,6 +633,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  NamaFakeReportNyaDiHierachyJikaTidakDitemukan: 
   currentTypeOfThisTextUIObject: 1
   SpecialCode: OldManAct2
   FunctionToCallAfterDialogOrTextSceneFinished: 
@@ -1726,7 +1727,8 @@ MonoBehaviour:
   Ending1Scene: {fileID: 1986545529}
   Ending2Scene: {fileID: 1310045916}
   SceneTextKetikaMasukMobil: {fileID: 616565311}
-  ScenTextKetikaMasukRumah: {fileID: 1040842343}
+  SceneTextKetikaMasukRumah: {fileID: 0}
+  SceneTextKetikaKeluarRumah: {fileID: 0}
   ProgressObjective: {fileID: 814653506}
   CompletionObjective: {fileID: 1945181708}
 --- !u!4 &537744423
@@ -1919,6 +1921,7 @@ MonoBehaviour:
   MenuliskanFakeReportUI:
     m_PersistentCalls:
       m_Calls: []
+  NamaFakeReportNyaDiHierachyJikaTidakDitemukan: 
   currentTypeOfThisTextUIObject: 2
   SpecialCode: MasukMobilMalam
   FunctionToCallAfterDialogOrTextSceneFinished: 
@@ -3417,6 +3420,7 @@ MonoBehaviour:
   MenuliskanFakeReportUI:
     m_PersistentCalls:
       m_Calls: []
+  NamaFakeReportNyaDiHierachyJikaTidakDitemukan: 
   currentTypeOfThisTextUIObject: 2
   SpecialCode: MasukRumahKorban
   FunctionToCallAfterDialogOrTextSceneFinished: 
@@ -3693,6 +3697,7 @@ MonoBehaviour:
   MenuliskanFakeReportUI:
     m_PersistentCalls:
       m_Calls: []
+  NamaFakeReportNyaDiHierachyJikaTidakDitemukan: 
   currentTypeOfThisTextUIObject: 2
   SpecialCode: TextSceneOpening1
   FunctionToCallAfterDialogOrTextSceneFinished: 
@@ -4377,6 +4382,7 @@ MonoBehaviour:
   MenuliskanFakeReportUI:
     m_PersistentCalls:
       m_Calls: []
+  NamaFakeReportNyaDiHierachyJikaTidakDitemukan: 
   currentTypeOfThisTextUIObject: 1
   SpecialCode: NoteBoxTesting
   FunctionToCallAfterDialogOrTextSceneFinished: 
@@ -4413,6 +4419,7 @@ MonoBehaviour:
   MenuliskanFakeReportUI:
     m_PersistentCalls:
       m_Calls: []
+  NamaFakeReportNyaDiHierachyJikaTidakDitemukan: 
   currentTypeOfThisTextUIObject: 2
   SpecialCode: Ending2Scene
   FunctionToCallAfterDialogOrTextSceneFinished: 
@@ -5255,6 +5262,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  NamaFakeReportNyaDiHierachyJikaTidakDitemukan: 
   currentTypeOfThisTextUIObject: 0
   SpecialCode: TestingDialog
   FunctionToCallAfterDialogOrTextSceneFinished: 
@@ -5949,6 +5957,7 @@ MonoBehaviour:
   MenuliskanFakeReportUI:
     m_PersistentCalls:
       m_Calls: []
+  NamaFakeReportNyaDiHierachyJikaTidakDitemukan: 
   currentTypeOfThisTextUIObject: 2
   SpecialCode: OpeningSceneUIAtStart
   FunctionToCallAfterDialogOrTextSceneFinished: 
@@ -6232,6 +6241,7 @@ MonoBehaviour:
   MenuliskanFakeReportUI:
     m_PersistentCalls:
       m_Calls: []
+  NamaFakeReportNyaDiHierachyJikaTidakDitemukan: 
   currentTypeOfThisTextUIObject: 0
   SpecialCode: aaaTestingDialog
   FunctionToCallAfterDialogOrTextSceneFinished: 
@@ -6944,6 +6954,7 @@ MonoBehaviour:
   MenuliskanFakeReportUI:
     m_PersistentCalls:
       m_Calls: []
+  NamaFakeReportNyaDiHierachyJikaTidakDitemukan: 
   currentTypeOfThisTextUIObject: 2
   SpecialCode: Ending1Scene
   FunctionToCallAfterDialogOrTextSceneFinished: 
@@ -7764,6 +7775,7 @@ MonoBehaviour:
   MenuliskanFakeReportUI:
     m_PersistentCalls:
       m_Calls: []
+  NamaFakeReportNyaDiHierachyJikaTidakDitemukan: 
   currentTypeOfThisTextUIObject: 2
   SpecialCode: MasukMobilMalam
   FunctionToCallAfterDialogOrTextSceneFinished: 
