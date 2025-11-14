@@ -145,7 +145,7 @@ public class OpenUIForDialogAndNote : MonoBehaviour
         }
 
         MenuliskanFakeReportUI.Invoke();
-        if (!(MenuliskanFakeReportUI.GetPersistentEventCount() > 0))
+        if (!(MenuliskanFakeReportUI.GetPersistentEventCount() > 0) && NamaFakeReportNyaDiHierachyJikaTidakDitemukan != "")
         {
             GameObject gameObject = GameObject.Find("FakeReportUI");
 

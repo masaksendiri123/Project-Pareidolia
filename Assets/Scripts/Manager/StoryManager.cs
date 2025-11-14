@@ -76,8 +76,10 @@ public class StoryManager : MonoBehaviour
     private void Start()
     {
         Debug.Log("Story Dimulai");
-        OpeningScene.OnInteract(); //Untuk Buka Scene Text Opening
-        ClearingTheCrashSite();
+        //OpeningScene.OnInteract(); //Untuk Buka Scene Text Opening
+        //ClearingTheCrashSite();
+
+        PergiKeRumahKorban();
     }
 
 
@@ -148,3 +150,4 @@ public class StoryManager : MonoBehaviour
         CompletionObjective.GetComponent<ObjectiveUIScript>().SetObjective(dataTask.textYangDitampilkanDiTask, jumlahProgressObjective, dataTask.namaFunctionYangDijalankanSetelahTask, tipeObjectiveCompletion);
     }
 }
+

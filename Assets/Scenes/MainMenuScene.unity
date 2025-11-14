@@ -1388,6 +1388,16 @@ PrefabInstance:
       propertyPath: m_text
       value: Options
       objectReference: {fileID: 0}
+    - target: {fileID: 4306607399368810648, guid: 57004daa7998db943aeb8176736fa7a2,
+        type: 3}
+      propertyPath: m_fontColor.a
+      value: 0.14117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306607399368810648, guid: 57004daa7998db943aeb8176736fa7a2,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 620099061
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3308,7 +3318,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6892b890849cbee4588521979d8dbe3b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.11
   m_Pitch: 1
   Loop: 0
   Mute: 0
