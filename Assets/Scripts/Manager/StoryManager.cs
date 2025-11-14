@@ -17,7 +17,7 @@ public class StoryManager : MonoBehaviour
     public OpenUIForDialogAndNote Ending1Scene;
     public OpenUIForDialogAndNote Ending2Scene;
     public OpenUIForDialogAndNote SceneTextKetikaMasukMobil;
-    public OpenUIForDialogAndNote ScenTextKetikaMasukRumah;
+    public OpenUIForDialogAndNote SceneTextKetikaMasukRumah;
 
     [Header("UI Task")]
     public GameObject ProgressObjective;
@@ -51,13 +51,13 @@ public class StoryManager : MonoBehaviour
     //Harus Diubah Manual
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "TestingMechanics")
+        if (scene.name == "Town (Act3)")
         {
             PergiKeRumahKorban();
         }
-        else if (scene.name == "")
+        else if (scene.name == "RumahKorban")
         {
-
+            WawancaraKeluaraga();
         }
     }
 
@@ -97,12 +97,7 @@ public class StoryManager : MonoBehaviour
 
     public void DoneKaburDariTKPNaikMobil()
     {
-        //SceneTextKetikaMasukMobil.OnInteract();
-
-        SceneManager.LoadScene("CityAreaScene");
-
-        //SceneManager.LoadScene("CityAreaScene");
-        //PergiKeRumahKorban();
+        SceneManager.LoadScene("Town (Act3)");
     }
 
     public void PergiKeRumahKorban()
@@ -117,7 +112,6 @@ public class StoryManager : MonoBehaviour
     public void MasukRumah()
     {
         SceneManager.LoadScene("RumahKorban");
-        WawancaraKeluaraga();
     }
 
     public void WawancaraKeluaraga()
