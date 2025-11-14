@@ -6944,8 +6944,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 94540716}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.6, y: 0, z: 38.2}
+  m_LocalRotation: {x: -0, y: -0.8129271, z: -0, w: 0.5823654}
+  m_LocalPosition: {x: -52.12, y: 0, z: 34.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6954,7 +6954,7 @@ Transform:
   - {fileID: 1531098453}
   - {fileID: 1451757285}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -108.766, z: 0}
 --- !u!1001 &95330710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16038,7 +16038,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 554112109}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9324a17abfef81b40a8cc178c539e946, type: 3}
   m_Name: 
@@ -16056,6 +16056,12 @@ MonoBehaviour:
   - NamaTask: WawancaraKeluaraga
     TextYangDitampilkanTask: Wawancara Keluarga Korban, Lalu Pulang
     NamaFunctionYangDijalankanSetelahTaskSelesai: KeluarRumah
+  - NamaTask: NgobrolDenganOldMan
+    TextYangDitampilkanTask: Berbicara Dengan Old man
+    NamaFunctionYangDijalankanSetelahTaskSelesai: KABUR
+  - NamaTask: KABUR
+    TextYangDitampilkanTask: SEGERA KABUR DARI KOTA INI!!!
+    NamaFunctionYangDijalankanSetelahTaskSelesai: '-'
   OpeningScene: {fileID: 1755660263}
   Ending1Scene: {fileID: 1905846725}
   Ending2Scene: {fileID: 1046014602}
@@ -29508,7 +29514,7 @@ Transform:
   m_GameObject: {fileID: 1190804104}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -52.34, y: 0, z: 32.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -50878,13 +50884,13 @@ SceneRoots:
   - {fileID: 675901149}
   - {fileID: 318262516}
   - {fileID: 93630458}
+  - {fileID: 1190804105}
   - {fileID: 94540719}
   - {fileID: 1520851059}
   - {fileID: 984500005}
   - {fileID: 64940991}
   - {fileID: 873223588}
   - {fileID: 380981682}
-  - {fileID: 1190804105}
   - {fileID: 1436688010}
   - {fileID: 1535128620}
   - {fileID: 475676711}
