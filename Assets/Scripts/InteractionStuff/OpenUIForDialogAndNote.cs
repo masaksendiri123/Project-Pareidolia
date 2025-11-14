@@ -5,11 +5,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class OpenUIForDialogAndNote : MonoBehaviour
 {
 
     public UnityEvent MenuliskanFakeReportUI = null;
+    public string NamaFakeReportNyaDiHierachyJikaTidakDitemukan;
 
     //Untuk Ngecek Apakah Interacting Untuk Dialog Atau Note
     public enum TypeOfThisTextUIObject
@@ -143,5 +145,11 @@ public class OpenUIForDialogAndNote : MonoBehaviour
         }
 
         MenuliskanFakeReportUI.Invoke();
+        if (!(MenuliskanFakeReportUI.GetPersistentEventCount() > 0))
+        {
+            GameObject gameObject = GameObject.Find("FakeReportUI");
+
+            GameObject TheFakeReportText = gameObject.transform.Find("FakeReportPaper/" + NamaFakeReportNyaDiHierachyJikaTidakDitemukan).gameObject;  
+        }
     }
 }

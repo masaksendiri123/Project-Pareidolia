@@ -18,6 +18,7 @@ public class StoryManager : MonoBehaviour
     public OpenUIForDialogAndNote Ending2Scene;
     public OpenUIForDialogAndNote SceneTextKetikaMasukMobil;
     public OpenUIForDialogAndNote SceneTextKetikaMasukRumah;
+    public OpenUIForDialogAndNote SceneTextKetikaKeluarRumah;
 
     [Header("UI Task")]
     public GameObject ProgressObjective;
@@ -51,13 +52,17 @@ public class StoryManager : MonoBehaviour
     //Harus Diubah Manual
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "Town (Act3)")
+        if (scene.name == "Town (Act1,2)")
         {
             PergiKeRumahKorban();
         }
         else if (scene.name == "RumahKorban")
         {
             WawancaraKeluaraga();
+        }
+        else if (scene.name == "Town (Act3)")
+        {
+            NgobrolDenganOldMan();
         }
     }
 
@@ -97,7 +102,7 @@ public class StoryManager : MonoBehaviour
 
     public void DoneKaburDariTKPNaikMobil()
     {
-        SceneManager.LoadScene("Town (Act3)");
+        SceneManager.LoadScene("Town (Act1,2)");
     }
 
     public void PergiKeRumahKorban()
@@ -116,8 +121,28 @@ public class StoryManager : MonoBehaviour
 
     public void WawancaraKeluaraga()
     {
-        SceneTextKetikaMasukMobil.OnInteract();
+        SceneTextKetikaMasukRumah.OnInteract();
 
+        var dataTask = MendapatkanDataDariArrayTasks(MethodBase.GetCurrentMethod().Name);
+        int jumlahProgressObjective = FindAnyObjectByType<ProgressObjectiveManager>().totalSeluruhSampah;
+        CompletionObjective.GetComponent<ObjectiveUIScript>().SetObjective(dataTask.textYangDitampilkanDiTask, jumlahProgressObjective, dataTask.namaFunctionYangDijalankanSetelahTask, tipeObjectiveCompletion);
+    }
+    public void KeluarRumah()
+    {
+        SceneManager.LoadScene("Town (Act3)");
+    }
+
+    public void NgobrolDenganOldMan()
+    {
+        SceneTextKetikaKeluarRumah.OnInteract();
+
+        var dataTask = MendapatkanDataDariArrayTasks(MethodBase.GetCurrentMethod().Name);
+        int jumlahProgressObjective = FindAnyObjectByType<ProgressObjectiveManager>().totalSeluruhSampah;
+        CompletionObjective.GetComponent<ObjectiveUIScript>().SetObjective(dataTask.textYangDitampilkanDiTask, jumlahProgressObjective, dataTask.namaFunctionYangDijalankanSetelahTask, tipeObjectiveCompletion);
+    }
+
+    public void KABUR()
+    {
         var dataTask = MendapatkanDataDariArrayTasks(MethodBase.GetCurrentMethod().Name);
         int jumlahProgressObjective = FindAnyObjectByType<ProgressObjectiveManager>().totalSeluruhSampah;
         CompletionObjective.GetComponent<ObjectiveUIScript>().SetObjective(dataTask.textYangDitampilkanDiTask, jumlahProgressObjective, dataTask.namaFunctionYangDijalankanSetelahTask, tipeObjectiveCompletion);
