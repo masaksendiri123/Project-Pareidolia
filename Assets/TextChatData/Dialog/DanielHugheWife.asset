@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2d9fbe506aaea04bb6ba36e28ed9abd, type: 3}
+  m_Name: DanielHugheWife
+  m_EditorClassIdentifier: 
+  chatLines:
+  - "Evan Cross: My name is Evan Cross, I have a few questions regarding the disappearance\_of\_Daniel\_Hughe"
+  - ". .\_."
+  - "Okay.. I don't know much about it,\_he\_just-"
+  - "Evan Cross: It's okay, just tell me what\_you\_know"
+  - "Evan Cross: Where was Daniel Hughe going before the time of his\_dissapearance?"
+  - "He was supposed to come home from work. That's all I know, I- I guess something
+    happened\_on\_the\_way\_home"
+  - "\"Evan Cross: This is bad, she might caught\_on.\""
+  - "Evan Cross: What makes you think\_that?"
+  - "What else could it possibly\_be?"
+  - 'Evan Cross: ...'
+  - "Evan Cross: Is there a chance that he might ran away\_in\_discreet?"
+  - "What?! No! He would never do such a thing\_like\_that!"
+  - "Evan Cross was it? If you are actually a journalist. You shouldn't throw baseless
+    accusations\_like\_that"
+  - "Evan Cross:. . .\_."
+  - "Evan Cross: I apologize. May I search the house for\_any\_clues?"
+  - Do what you want. Murderer Journalist
+  - "Evan Cross: ! !\_!"
+  - "\"Evan Cross: Daniel.. Why is\_he-?\""
+  - "\"Evan Cross: Something is wrong with this place. I have\_to\_go-\""
+  - Leaving so soon?
+  - "Evan Cross: Yeah- I\_uh-"
+  - "I understand. Please notify me if you got a lead\_on\_my\_husband"
+  - 'Evan Cross: Yeah, sure..'

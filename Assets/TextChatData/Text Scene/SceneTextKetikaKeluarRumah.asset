@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2d9fbe506aaea04bb6ba36e28ed9abd, type: 3}
+  m_Name: SceneTextKetikaKeluarRumah
+  m_EditorClassIdentifier: 
+  chatLines:
+  - "As I stepped out of their house, the night air felt heavier than before. The
+    door closed behind me, trapping their hope and my lies inside. Their questions,
+    their trembling voices, still echoed in my head. <br><br>  They trusted me.<br>
+    They shouldn\u2019t have.<br><br>  I walked toward the gate, forcing my breathing
+    to steady.<br><br>  If only she knew the truth.<br><br>  This interview bought
+    me a little more time.<br> But guilt has a way of following you home\u2026<br>
+    and tonight, it walked right behind me.<br><br>  But Something Has Change Outside"

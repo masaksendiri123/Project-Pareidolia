@@ -41,6 +41,9 @@ public class FakeReportUIRevealAndNotification : MonoBehaviour
 
     private void MenampikanFakeReportUI(InputAction.CallbackContext context)
     {
+        if (FakeReportUIPage == null)
+            return;
+
         if(FakeReportUIPage.activeSelf) //jika page sudah dibuka
         {
             FakeReportUIPage.SetActive(false);

@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2d9fbe506aaea04bb6ba36e28ed9abd, type: 3}
   m_Name: SceneTextKetikaMasukRumah
   m_EditorClassIdentifier: 
-  chatLines: []
+  chatLines:
+  - "I stepped into the house, the air thick with a silence that clung to my skin
+    like cold fog. Every corner of the room reminded me of the night I took their
+    child from them. Yet here I was posing as a journalist pretending to help them
+    seek answers I already knew too well. <br><br>  The mother\u2019s eyes were swollen
+    from nights without sleep. But I forced a calm smile.<br><br>  I just needed
+    the interview\u2026<br> I needed to control the story."
