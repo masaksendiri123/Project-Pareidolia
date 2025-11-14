@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class ObjectRaycastInteraction : MonoBehaviour
 {
+
     public Camera MainCamera;
     public GameObject PressEToInteractUI;
 
@@ -42,11 +43,16 @@ public class ObjectRaycastInteraction : MonoBehaviour
             if (m_raycastHit.collider.CompareTag("Interactable"))
             {
                 PressEToInteractUI.SetActive(true);
+                return;
             }
             else
             {
                 PressEToInteractUI.SetActive(false);
             }
+        }
+        else
+        {
+            PressEToInteractUI.SetActive(false);
         }
     }
 
@@ -57,7 +63,18 @@ public class ObjectRaycastInteraction : MonoBehaviour
         {
             if (m_raycastHitInteract.collider.CompareTag("Interactable"))
             {
-                m_raycastHitInteract.collider.GetComponent<OpenUIForDialogAndNote>().OnInteract();
+                if (m_raycastHitInteract.collider.GetComponent<OpenUIForDialogAndNote>())
+                {
+                    m_raycastHitInteract.collider.GetComponent<OpenUIForDialogAndNote>().OnInteract();
+                }
+                if (m_raycastHitInteract.collider.GetComponent<ProgressObjectiveScript>())
+                {
+                    m_raycastHitInteract.collider.GetComponent<ProgressObjectiveScript>().OnInteract();
+                }
+                if (m_raycastHitInteract.collider.GetComponent<CompletionObjectiveScript>())
+                {
+                    m_raycastHitInteract.collider.GetComponent<CompletionObjectiveScript>().OnInteract();
+                }
             }
         }
     }

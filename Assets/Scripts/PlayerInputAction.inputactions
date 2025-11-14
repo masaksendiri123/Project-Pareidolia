@@ -50,6 +50,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "OpeningFakeReport",
+                    "type": "Button",
+                    "id": "36c083fd-baba-498e-8b0a-8b5fa6039339",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -193,6 +202,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Interacting",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "18e62ddf-92aa-4890-9667-9109109f17c4",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpeningFakeReport",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

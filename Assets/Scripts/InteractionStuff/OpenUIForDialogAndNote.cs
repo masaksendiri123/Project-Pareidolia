@@ -3,10 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class OpenUIForDialogAndNote : MonoBehaviour
 {
+
+    public UnityEvent MenuliskanFakeReportUI = null;
 
     //Untuk Ngecek Apakah Interacting Untuk Dialog Atau Note
     public enum TypeOfThisTextUIObject
@@ -18,6 +21,8 @@ public class OpenUIForDialogAndNote : MonoBehaviour
     
     public TypeOfThisTextUIObject currentTypeOfThisTextUIObject;
     public string SpecialCode;
+
+    public string FunctionToCallAfterDialogOrTextSceneFinished;
 
     //Menyimpan data Canvas UI dan TextChatData
     GameObject uiCanvas;
@@ -82,6 +87,17 @@ public class OpenUIForDialogAndNote : MonoBehaviour
 
                 uiCanvasChildren.Clear();
                 FindObjectOfType<MovementStatusHandler>().CurrentMovementStatus = MovementStatusHandler.MovementStatus.CanMove;
+                if (FunctionToCallAfterDialogOrTextSceneFinished != "")
+                {
+                    FindObjectOfType<StoryManager>().SendMessage(FunctionToCallAfterDialogOrTextSceneFinished);
+                }
+
+                if (FunctionToCallAfterDialogOrTextSceneFinished != "")
+                {
+                    FindObjectOfType<StoryManager>().SendMessage(FunctionToCallAfterDialogOrTextSceneFinished);
+                }
+
+                MenuliskanFakeReportUI.Invoke();
             }
         }
         else if (currentTypeOfThisTextUIObject == TypeOfThisTextUIObject.TextScene)
@@ -104,6 +120,7 @@ public class OpenUIForDialogAndNote : MonoBehaviour
                 textComponent = uiCanvas.GetComponentInChildren<TextMeshProUGUI>();
                 Debug.Log(textComponent);
                 FindObjectOfType<MovementStatusHandler>().CurrentMovementStatus = MovementStatusHandler.MovementStatus.Scene;
+                //Debug.Log(FindObjectOfType<MovementStatusHandler>().CurrentMovementStatus);
             }
         }
     }
@@ -119,5 +136,12 @@ public class OpenUIForDialogAndNote : MonoBehaviour
 
         uiCanvasChildren.Clear();
         FindObjectOfType<MovementStatusHandler>().CurrentMovementStatus = MovementStatusHandler.MovementStatus.CanMove;
+
+        if (FunctionToCallAfterDialogOrTextSceneFinished != "")
+        {
+            FindObjectOfType<StoryManager>().SendMessage(FunctionToCallAfterDialogOrTextSceneFinished);
+        }
+
+        MenuliskanFakeReportUI.Invoke();
     }
 }
