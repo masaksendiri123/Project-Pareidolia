@@ -56,7 +56,7 @@ public class StoryManager : MonoBehaviour
         {
             PergiKeRumahKorban();
         }
-        else if (scene.name == "RumahKorban")
+        else if (scene.name == "House (Act2)")
         {
             WawancaraKeluaraga();
         }
@@ -76,10 +76,8 @@ public class StoryManager : MonoBehaviour
     private void Start()
     {
         Debug.Log("Story Dimulai");
-        //OpeningScene.OnInteract(); //Untuk Buka Scene Text Opening
-        //ClearingTheCrashSite();
-
-        PergiKeRumahKorban();
+        OpeningScene.OnInteract(); //Untuk Buka Scene Text Opening
+        ClearingTheCrashSite();
     }
 
 
@@ -118,15 +116,23 @@ public class StoryManager : MonoBehaviour
 
     public void MasukRumah()
     {
-        SceneManager.LoadScene("RumahKorban");
+        SceneManager.LoadScene("House (Act2)");
     }
 
     public void WawancaraKeluaraga()
     {
         SceneTextKetikaMasukRumah.OnInteract();
+        int jumlahProgressObjective;
 
         var dataTask = MendapatkanDataDariArrayTasks(MethodBase.GetCurrentMethod().Name);
-        int jumlahProgressObjective = FindAnyObjectByType<ProgressObjectiveManager>().totalSeluruhSampah;
+        if (FindAnyObjectByType<ProgressObjectiveManager>() != null)
+        {
+            jumlahProgressObjective = FindAnyObjectByType<ProgressObjectiveManager>().totalSeluruhSampah;
+        }
+        else
+        {
+            jumlahProgressObjective = 0;
+        }
         CompletionObjective.GetComponent<ObjectiveUIScript>().SetObjective(dataTask.textYangDitampilkanDiTask, jumlahProgressObjective, dataTask.namaFunctionYangDijalankanSetelahTask, tipeObjectiveCompletion);
     }
     public void KeluarRumah()
@@ -138,16 +144,39 @@ public class StoryManager : MonoBehaviour
     {
         SceneTextKetikaKeluarRumah.OnInteract();
 
+        int jumlahProgressObjective;
+
         var dataTask = MendapatkanDataDariArrayTasks(MethodBase.GetCurrentMethod().Name);
-        int jumlahProgressObjective = FindAnyObjectByType<ProgressObjectiveManager>().totalSeluruhSampah;
+        if (FindAnyObjectByType<ProgressObjectiveManager>() != null)
+        {
+            jumlahProgressObjective = FindAnyObjectByType<ProgressObjectiveManager>().totalSeluruhSampah;
+        }
+        else
+        {
+            jumlahProgressObjective = 0;
+        }
         CompletionObjective.GetComponent<ObjectiveUIScript>().SetObjective(dataTask.textYangDitampilkanDiTask, jumlahProgressObjective, dataTask.namaFunctionYangDijalankanSetelahTask, tipeObjectiveCompletion);
     }
 
     public void KABUR()
     {
         var dataTask = MendapatkanDataDariArrayTasks(MethodBase.GetCurrentMethod().Name);
-        int jumlahProgressObjective = FindAnyObjectByType<ProgressObjectiveManager>().totalSeluruhSampah;
+        int jumlahProgressObjective;
+
+        if (FindAnyObjectByType<ProgressObjectiveManager>() != null)
+        {
+            jumlahProgressObjective = FindAnyObjectByType<ProgressObjectiveManager>().totalSeluruhSampah;
+        }
+        else
+        {
+            jumlahProgressObjective = 0;
+        }
         CompletionObjective.GetComponent<ObjectiveUIScript>().SetObjective(dataTask.textYangDitampilkanDiTask, jumlahProgressObjective, dataTask.namaFunctionYangDijalankanSetelahTask, tipeObjectiveCompletion);
+    }
+
+    public void Nothing()
+    {
+
     }
 }
 
