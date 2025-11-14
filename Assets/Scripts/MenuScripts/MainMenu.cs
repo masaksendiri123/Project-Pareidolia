@@ -5,6 +5,6 @@ public class NewGame : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene(2); // Replace with your actual game scene name
+        SceneManager.LoadScene("Town (Act1)"); // Replace with your actual game scene name
     }
 }

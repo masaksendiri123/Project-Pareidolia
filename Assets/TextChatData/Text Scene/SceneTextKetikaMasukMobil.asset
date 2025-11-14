@@ -13,5 +13,12 @@ MonoBehaviour:
   m_Name: SceneTextKetikaMasukMobil
   m_EditorClassIdentifier: 
   chatLines:
-  - Malam Itu Saya Telah Membunuh Orang, Tanpa sadar <br> <br> Keesokan Harinya Saya
-    Disuruh Investigasi Rumah keluarga Korban
+  - "That night, I had just taken another person\u2019s life. I cant Sleep event
+    though I closed my eyes, the pressure of what I\u2019d done pressed down on my
+    chest, and the lingering fear clawed at the back of my mind like a restless shadow.
+    <br> <br>  The next morning, as part of my job as a journalist, I was assigned
+    to investigate a missing person case. I knew exactly who they were looking for.
+    I knew the truth, and I knew the guilt was mine. But I couldn\u2019t bring myself
+    to confess. Instead, I was forced to construct an alibi carefully crafted lies
+    and fabricated evidence to wrap the cracks of the crime I had committed. The
+    only way to survive\u2026 was to bury the truth deeper than the body itself."
