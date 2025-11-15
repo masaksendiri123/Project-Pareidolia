@@ -4,7 +4,6 @@ using UnityEngine;
 using TMPro;
 using UnityEditor.Rendering;
 using UnityEngine.InputSystem;
-using Unity.PlasticSCM.Editor.WebApi;
 using System.Threading.Tasks;
 using System.Threading;
 using System;
@@ -34,7 +33,7 @@ public class DialogTypewritterEffect : MonoBehaviour
 
     [Header("Untuk Menyimpan Kalimat yang Sedang Ditampilkan")]
     private string currentDialog;
-    
+
     private OpenUIForDialogAndNote.TypeOfThisTextUIObject typeOfThisTextUIObject;
     private string specialCode;
 
@@ -91,14 +90,14 @@ public class DialogTypewritterEffect : MonoBehaviour
                 }
                 else
                 {
-                    dialogTextUI.text += currentCharacter; // Add character to UI 
+                    dialogTextUI.text += currentCharacter; // Add character to UI
                 }
 
                 if (typeOfThisTextUIObject  == OpenUIForDialogAndNote.TypeOfThisTextUIObject.TextScene)
                 {
                     FindObjectOfType<AudioManager>().Play("KeyboardClickSound");
                 }
-                
+
                 if (currentCharacter == '.' || currentCharacter == ',' || currentCharacter == '!' || currentCharacter == '?')
                 {
 
