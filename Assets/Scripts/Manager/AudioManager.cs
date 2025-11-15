@@ -44,7 +44,6 @@ public class AudioManager : MonoBehaviour
     {
         if (scene.name == "MainMenuScene")
         {
-            UnityEditor.EditorApplication.isPlaying = false;
             Application.Quit();
         }
     }
