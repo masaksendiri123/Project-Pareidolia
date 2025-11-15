@@ -6797,6 +6797,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1190804105}
   - {fileID: 388699096}
   - {fileID: 159399392}
   - {fileID: 1531098453}
@@ -7978,7 +7979,7 @@ MonoBehaviour:
     case I am reporting. Somehow, I managed to bury the truth to the ground just
     barely. The only reason I came here was to make sure it stays that way.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1c126c57ad20bcf46af8ebf4076fc5de, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -8042,7 +8043,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &138689350
@@ -15893,22 +15894,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tasks:
   - NamaTask: ClearingTheCrashSite
-    TextYangDitampilkanTask: Kumpulkan Seluruh Barang Bukti Yang Tersebar
+    TextYangDitampilkanTask: 'Collect the scattered evidence of the crash '
     NamaFunctionYangDijalankanSetelahTaskSelesai: DoneClearingTheCrashSite
   - NamaTask: DoneClearingTheCrashSite
-    TextYangDitampilkanTask: Pergi Ke mobil Untuk Pergi dari tempat Kejadian perkara
+    TextYangDitampilkanTask: 'Go back to your car and flee the scene '
     NamaFunctionYangDijalankanSetelahTaskSelesai: DoneKaburDariTKPNaikMobil
   - NamaTask: PergiKeRumahKorban
-    TextYangDitampilkanTask: Tanya Orang Sekitar Dimana Rumah Korban Dan Datangi
+    TextYangDitampilkanTask: Ask the locals for the address of Daniel Hughe home
     NamaFunctionYangDijalankanSetelahTaskSelesai: MasukRumah
   - NamaTask: WawancaraKeluaraga
-    TextYangDitampilkanTask: Wawancara Keluarga Korban, Lalu Pulang
+    TextYangDitampilkanTask: 'Have a conversation with the wife then go home '
     NamaFunctionYangDijalankanSetelahTaskSelesai: KeluarRumah
   - NamaTask: NgobrolDenganOldMan
-    TextYangDitampilkanTask: Berbicara Dengan Old man
+    TextYangDitampilkanTask: "Talk with\_the\_old\_man"
     NamaFunctionYangDijalankanSetelahTaskSelesai: KABUR
   - NamaTask: KABUR
-    TextYangDitampilkanTask: SEGERA KABUR DARI KOTA INI!!!
+    TextYangDitampilkanTask: RUNN!!!!!
     NamaFunctionYangDijalankanSetelahTaskSelesai: '-'
   OpeningScene: {fileID: 1755660263}
   Ending1Scene: {fileID: 1905846725}
@@ -17759,8 +17760,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 217.2}
-  m_SizeDelta: {x: 325, y: 71}
+  m_AnchoredPosition: {x: 9.2916, y: 175.3882}
+  m_SizeDelta: {x: 353.5894, y: 89.3788}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &667289867
 MonoBehaviour:
@@ -17782,7 +17783,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2b6de6c28ba7de24283c7aa7f21c1771, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a0f5e90dccd67d144b3c9d6cdf152473, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21622,7 +21623,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Ambil Sampah Yang Bergelatakan di Tanah, Lalu masuk mobil
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1c126c57ad20bcf46af8ebf4076fc5de, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -21686,7 +21687,7 @@ MonoBehaviour:
   m_margin: {x: 0.047851562, y: -0.6229248, z: 0.13122559, w: -0.30682373}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &866451249
@@ -22251,6 +22252,27 @@ MonoBehaviour:
     volume: 1
     pitch: 0.498
     RandomPitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Whispering
+    clip: {fileID: 8300000, guid: 8646ed99d684e1e40965daaf1f43081d, type: 3}
+    volume: 1
+    pitch: 0.498
+    RandomPitch: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: Ambience
+    clip: {fileID: 8300000, guid: d1faa0e0b436bcf4ca1ffaeb449b6dd9, type: 3}
+    volume: 0.159
+    pitch: 0.498
+    RandomPitch: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: JumpscareTeriakan
+    clip: {fileID: 8300000, guid: 012fb44098f706243876e762f027d29b, type: 3}
+    volume: 0.475
+    pitch: 0.498
+    RandomPitch: 0
     loop: 0
     source: {fileID: 0}
 --- !u!4 &894414108
@@ -29593,13 +29615,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190804104}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -52.34, y: 0, z: 32.64}
+  m_LocalRotation: {x: -0, y: 0.8129271, z: -0, w: 0.5823654}
+  m_LocalPosition: {x: -1.8891864, y: 0, z: 0.87422717}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1202116715}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 94540719}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1190804106
 MonoBehaviour:
@@ -30140,6 +30162,7 @@ GameObject:
   - component: {fileID: 1202116718}
   - component: {fileID: 1202116717}
   - component: {fileID: 1202116716}
+  - component: {fileID: 1202116722}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: MainCamera
@@ -30330,6 +30353,20 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1202116722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202116714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd31754e853e2c84dadfe30111947b82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bobSpeed: 14
+  bobAmount: 0.05
 --- !u!1001 &1204456383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31929,7 +31966,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1c126c57ad20bcf46af8ebf4076fc5de, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -31993,7 +32030,7 @@ MonoBehaviour:
   m_margin: {x: 229.96002, y: -501.7368, z: 232.52136, w: 68.91991}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1268125034
@@ -37939,7 +37976,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1c126c57ad20bcf46af8ebf4076fc5de, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -38003,7 +38040,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1547754200
@@ -42369,7 +42406,7 @@ RectTransform:
   m_GameObject: {fileID: 1703729827}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.38332, y: 0.24165, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 536885074}
@@ -43726,11 +43763,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '0/8
-
-'
+  m_text: 0/3
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1c126c57ad20bcf46af8ebf4076fc5de, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -43794,7 +43829,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -2.7983398, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1745623343
@@ -43845,8 +43880,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 34, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 71.45091, y: -1.5782}
+  m_SizeDelta: {x: 300.3313, y: 95.8705}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1749171990
 MonoBehaviour:
@@ -43870,8 +43905,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Paused
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1c126c57ad20bcf46af8ebf4076fc5de, type: 2}
+  m_sharedMaterial: {fileID: -2974908275813576661, guid: 1c126c57ad20bcf46af8ebf4076fc5de,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -43895,13 +43931,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 72
+  m_fontSizeBase: 50
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -43931,7 +43967,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 141.0086, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -49605,9 +49641,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ambil Sampah Yang Bergelatakan di Tanah, Lalu masuk mobil
+  m_text: Collect scattered evidence of the crash
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1c126c57ad20bcf46af8ebf4076fc5de, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -49671,7 +49707,7 @@ MonoBehaviour:
   m_margin: {x: 0.047851562, y: -0.6229248, z: 0.13122559, w: -0.30682373}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2084951695
@@ -51448,7 +51484,6 @@ SceneRoots:
   - {fileID: 675901149}
   - {fileID: 318262516}
   - {fileID: 93630458}
-  - {fileID: 1190804105}
   - {fileID: 94540719}
   - {fileID: 1520851059}
   - {fileID: 984500005}
