@@ -4,6 +4,7 @@
 using UnityEngine.Audio;
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
+
+        SceneManager.sceneLoaded += OnSceneloaded;
 
         if (instance == null)
             instance = this;
@@ -37,11 +40,14 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    // void Start()
-    // {
-    //     Play("Theme");
-    //   
-    // }
+    public void OnSceneloaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "MainMenuScene")
+        {
+            UnityEditor.EditorApplication.isPlaying = false;
+            Application.Quit();
+        }
+    }
 
     public void Play(string name)
     {
